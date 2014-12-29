@@ -2,7 +2,7 @@ function scrapeForPlayerNames(){
 
   console.log("started running scrapeForPlayerNames");
 
-  var express = require('express');
+  /*var express = require('express');
   var fs = require('fs');
   var request = require('request');
   var cheerio = require('cheerio');
@@ -99,7 +99,7 @@ function scrapeForPlayerNames(){
 
   console.log('Magic happens on port 8081');
 
-  exports = module.exports = app;
+  exports = module.exports = app;*/
 
 
 }
