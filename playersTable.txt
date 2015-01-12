@@ -1,0 +1,100 @@
+Jahlil,Okafor,6-11,270,C,Duke,Fr.
+Emmanuel,Mudiay,6-5,190,PG,Guangdong,1996
+Stanley,Johnson,6-7,245,SF,Arizona,Fr.
+Myles,Turner,6-11,243,PF/C,Texas,Fr.
+Justise,Winslow,6-6,225,SG/SF,Duke,Fr.
+Karl-Anthony,Towns,7-0,250,C,Kentucky,Fr.
+D'Angelo,Russell,6-5,180,PG/SG,Ohio State,Fr.
+Trey,Lyles,6-10,250,PF,Kentucky,Fr.
+Kevon,Looney,6-9,220,SF/PF,UCLA,Fr.
+Montrezl,Harrell,6-8,240,PF,Louisville,Jr.
+Mario,Hezonja,6-8,215,SG/SF,FC Barcelona,1995
+Kristaps,Porzingis,7-1,220,PF,Cajasol Sevilla,1995
+Isaiah,Taylor,6-2,170,PG,Texas,So.
+Willie,Cauley-Stein,7-0,240,C,Kentucky,Jr.
+Delon,Wright,6-5,190,PG/SG,Utah,Sr.
+Terry,Rozier,6-2,190,PG,Louisville,So.
+Chris,McCullough,6-10,220,PF,Syracuse,Fr.
+Jerian,Grant,6-5,205,PG/SG,Notre Dame,Sr.
+Justin,Anderson,6-6,225,SG/SF,Virginia,Jr.
+Sam,Dekker,6-9,230,SF,Wisconsin,Jr.
+Kelly,Oubre,6-7,200,SF,Kansas,Fr.
+Cliff,Alexander,6-8,250,PF,Kansas,Fr.
+Caris,LeVert,6-7,200,SG,Michigan,Jr.
+Bobby,Portis,6-10,240,PF,Arkansas,So.
+Christian,Wood,6-11,220,PF,UNLV,So.
+Daniel,Hamilton,6-7,190,SG/SF,UConn,Fr.
+Damian,Jones,6-10,250,C,Vanderbilt,So.
+Troy,Williams,6-7,215,SF,Indiana,So.
+Domantas,Sabonis,6-10,230,PF,Gonzaga,Fr.
+Frank,Kaminsky,7-0,240,C,Wisconsin,Sr.
+Buddy,Hield,6-4,215,SG,Oklahoma,Jr.
+Jake,Layman,6-8,205,SF,Maryland,Jr.
+Rondae,Hollis-Jefferson,6-7,215,SF,Arizona,So.
+Terran,Petteway,6-6,215,SF,Nebraska,Jr.
+Tyrone,Wallace,6-5,200,SG,California,Jr.
+Egemen,Guven,6-11,220,PF/C,Karsiyaka ,1996
+Jordan,Mickey,6-8,235,PF,LSU,So.
+RJ,Hunter,6-5,180,SG,Georgia St.,Jr.
+Ryan,Boatright,5-11,175,PG,UConn,Sr.
+Keifer,Sykes,6-0,180,PG,Wisconsin Green Bay,Sr.
+EC,Matthews,6-5,190,PG/SG,Rhode Island,So.
+Demetrius,Jackson,6-1,200,PG,Notre Dame,So.
+Norman,Powell,6-4,215,SG,UCLA,Sr.
+Brice,Johnson,6-9,225,PF,North Carolina,Jr.
+Chasson,Randle ,6-2,185,PG/SG,Stanford,Sr.
+Kris,Dunn,6-3,205,PG,Providence,So.
+Melo,Trimble,6-3,190,PG,Maryland,Fr.
+Tyus,Jones,6-1,190,PG,Duke,Fr.
+Moussa,Diagne,6-11,225,C,Fuenlabrada,1994
+Rakeem,Christmas,6-9,250,PF,Syracuse,Sr.
+Aaron,White,6-9,225,SF/PF,Iowa,Sr.
+Johnathan,Williams III,6-9,225,PF,Missouri,So.
+Jakob,Poeltl,7-0,235,C,Utah,Fr.
+Amida,Brimah,7-0,230,C,UConn,So.
+Robert,Upshaw,7-0,250,C,Washington,So.
+Vince,Hunter,6-8,205,SF/PF,UTEP,So.
+Marcus,Lee,6-9,220,PF/C,Kentucky,So.
+Brandon,Ashley,6-8,230,PF,Arizona,Jr.
+Wayne,Selden,6-5,230,SG,Kansas,So.
+Juwan,Staten,6-0,190,PG,West Virginia,Sr.
+Devin,Booker,6-6,205,SG,Kentucky,Fr.
+Shawn,Long,6-9,255,PF,Louisiana Lafayette,Jr.
+Chris,Obekpa,6-9,240,C,St. Johns,Jr.
+Nigel,Hayes,6-8,235,PF,Wisconsin,So.
+Rashad,Vaughn,6-6,210,SG,UNLV,Fr.
+Zak,Irvin,6-6,215,SG,Michigan,So.
+James,Blackmon,6-3,190,SG,Indiana,Fr.
+Justin,Jackson ,6-8,195,SF,North Carolina,Fr.
+Kaleb,Tarczewski,7-0,245,C,Arizona,Jr.
+Dakari,Johnson,7-0,255,C,Kentucky,So.
+Olivier,Hanlan,6-4,190,PG,Boston College,Jr.
+Marcus,Paige,6-1,175,PG,North Carolina,Jr.
+Timothe,Luwawu,6-6,205,SG/SF,Antibes,1995
+Sheldon,McClellan,6-5,205,SG,Miami,Jr.
+Ron,Baker,6-4,220,SG,Wichita State,Jr.
+Nigel,Williams-Goss,6-3,190,PG,Washington,So.
+Chris,Walker,6-10,220,PF,Florida,So.
+Treveon,Graham,6-6,220,SG,VCU,Sr.
+Okben,Ulubay,6-7,190,SF,Anadolu Efes,1996
+Aleksandar,Vezenkov,6-9,210,SF/PF,Aris,1995
+Alex,Poythress,6-8,238,PF,Kentucky,Jr.
+Michael,Gbinije,6-7,200,SF,Syracuse,Jr.
+Mouhammadou,Jaiteh,6-11,250,C,Nanterre,1994
+Perry,Ellis,6-8,225,PF,Kansas,Jr.
+Andrew,Harrison,6-6,210,PG/SG,Kentucky,So.
+Mateusz,Ponitka,6-5,205,SG,Telenet Oostende,1993
+Dorian,Finney-Smith ,6-8,220,SF/PF,Florida,Jr.
+Rasheed,Sulaimon,6-4,195,SG,Duke,Jr.
+Marcus,Foster,6-2,215,PG/SG,Kansas State,So.
+Aaron,Harrison,6-6,212,SG,Kentucky,So.
+Austin,Nichols,6-9,230,PF,Memphis,So.
+Nikola,Milutinov,7-0,230,C,KK Partizan,1994
+Luka,Mitrovic,6-9,200,SF/PF,Crvena Zvezda,1993
+Zach,Auguste,6-10,240,PF,Notre Dame,Jr.
+Xavier,Johnson,6-7,230,SF,Colorado,Jr.
+Branden,Dawson,6-6,225,SF,Michigan St.,Sr.
+Levi,Randolph,6-5,205,SG,Alabama,Sr.
+Michael,Frazier,6-4,195,SG,Florida,Jr.
+Rysheed,Jordan,6-4,195,PG,St. Johns,So.
+Rodney,Purvis,6-4,205,PG/SG,UConn,So.

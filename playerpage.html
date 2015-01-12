@@ -1,0 +1,354 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="NBA Draft Prospect Database">
+    <meta name="author" content="Holden McGinnis">
+
+    <title>NBA ProspectDB - Player Page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+   
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./index.html">ProspectDB</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <!--<li>
+                        <a href="./mockdrafts.html">Mock Drafts</a>
+                    </li>
+                    <li>
+                        <a href="./playerindex.html">Player Index</a>
+                    </li>-->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <style>
+        div.profile-box {
+            float: left;
+            border: 1px solid black;
+            border-spacing: 100px;
+            margin-right: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        p.profile {
+            line-height: 100%;
+            padding-top: 2px;
+            font-weight: 500;
+        }
+        p.profile-top {
+            line-height: 100%;
+            padding-top: 6px;
+            
+            font-weight: 500;
+        }
+        div.headline-box {
+            float: left;
+            border: 1px solid black;
+            border-spacing: 100px;
+            width: 23%;
+            padding-left: 5px;
+            padding-right: 5px;
+            position:20px;
+            margin-right: 10px;
+            overflow: scroll;
+        }
+        div.video-box {
+            float: left;
+            border: 1px solid black;
+            border-spacing: 100px;
+            padding-left: 5px;
+            padding-right: 5px;
+            position:20px;
+            margin-right: 10px;
+            width: 23%;
+            overflow: scroll;
+        }
+
+    </style>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 id="playername"></h1>
+            </div>
+        </div>
+
+        <div class = "profile-box">
+            <p class = "profile-top"><img src="" height="300" width="300"></p>
+            <p class = "profile"></p> 
+            <p class = "profile"></p>
+            <p class = "profile"></p>
+            <p class = "profile" id = "college"></p>
+            <p class = "profile"></p>
+        </div>
+        <!-- Recent headlines-->
+        <div class = "headline-box">
+            <p class = "headline-header"><strong>Recent Draft Headlines</strong></p>
+            <div id= "headline-marker"> </div>
+            
+
+        </div>
+
+        <!-- Recent Tweets -->
+        <div class = "headline-box">
+            <p class = "headline-header"><strong>Recent College Headlines</strong></p>
+            <div id = "headline-marker2"></div>
+
+        </div>
+
+        <!-- Top Videos-->
+        <div class = "video-box">
+            <p class = "video-header"><strong>Recent Videos</strong></p>
+            <div id= "video-marker"> </div>
+
+        </div>
+
+        <!-- Most Retweeted Tweets -->
+
+
+
+    </div>
+
+
+
+<!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- External File of javascript functions -->
+    <script src="js/main.js"></script>
+
+<!-- Google Search API-->
+<script src="https://www.google.com/jsapi"></script>
+
+
+<!--<script> 
+    $(document).ready(function() {
+        accessPlayerPageScraper();
+    });
+</script>-->
+
+
+
+<!-- Uses Google Image Search API to load photo of player-->
+
+<!-- Code based on example on https://developers.google.com/image-search/v1/devguide -->
+<script type="text/javascript">
+    profileScrape();
+    var name = getName();
+    var searchString = name + " profile";
+    var searchString2 = name + " college";
+
+    google.load('search', '1');
+
+    var imageSearch, newsSearch, videoSearch, newsSearch2;
+
+    function imageSearchComplete() {
+
+        // Check that we got results
+        if (imageSearch.results && imageSearch.results.length > 0) {
+          // Save the first result
+          var playerImage = imageSearch.results[0];
+          //console.log(playerImage.url);
+          addPlayerPhoto(playerImage.unescapedUrl, playerImage.height, playerImage.width);
+        }
+
+    }
+
+    function newsSearchComplete() {
+        if (newsSearch.results && newsSearch.results.length > 0) {
+            var newsResults = newsSearch.results;
+
+            var newsDiv = document.createElement("div");
+            //console.log(newsSearch.results.length);
+
+            for (var i = 0; i < newsResults.length; i++) {
+                var newsGraf = document.createElement("p");
+                var newsElement = document.createElement("a");
+                var newsTitle = newsResults[i].titleNoFormatting;
+                if(newsTitle.indexOf("&#39;") >= 0) {
+                    newsTitle = newsTitle.replace(/&#39;/g, "'");
+                }
+                
+                var newsElementText = document.createTextNode(newsTitle);
+                var decoded = decodeURIComponent(newsResults[i].url);
+
+                newsElement.setAttribute("href", decoded);
+                newsElement.appendChild(newsElementText);
+                newsGraf.appendChild(newsElement);
+                newsDiv.appendChild(newsGraf);
+
+            } 
+
+            var headlineMarker = document.getElementById("headline-marker");
+            var parentNewsNode = headlineMarker.parentNode;
+
+            parentNewsNode.insertBefore(newsDiv, headlineMarker.nextSibling);
+
+            
+
+        }
+    }
+
+    function newsSearchCompleteColl() {
+        if (newsSearch2.results && newsSearch2.results.length > 0) {
+            var newsResults = newsSearch2.results;
+
+            var newsDiv = document.createElement("div");
+            //console.log(newsSearch.results.length);
+
+            for (var i = 0; i < newsResults.length; i++) {
+                var newsGraf = document.createElement("p");
+                var newsElement = document.createElement("a");
+                var newsTitle = newsResults[i].titleNoFormatting;
+                if(newsTitle.indexOf("&#39;") >= 0) {
+                    newsTitle = newsTitle.replace(/&#39;/g, "'");
+                }
+                
+                var newsElementText = document.createTextNode(newsTitle);
+                var decoded = decodeURIComponent(newsResults[i].url);
+
+                newsElement.setAttribute("href", decoded);
+                newsElement.appendChild(newsElementText);
+                newsGraf.appendChild(newsElement);
+                newsDiv.appendChild(newsGraf);
+
+            } 
+
+            var headlineMarker = document.getElementById("headline-marker2");
+            var parentNewsNode = headlineMarker.parentNode;
+
+            parentNewsNode.insertBefore(newsDiv, headlineMarker.nextSibling);
+
+            
+
+        }
+    }
+
+    function videoSearchComplete() {
+        if (videoSearch.results && videoSearch.results.length > 0) {
+            var videoResults = videoSearch.results;
+
+            var videoDiv = document.createElement("div");
+            //console.log(videoSearch.results.length);
+
+            for (var i = 0; i < videoResults.length; i++) {
+                var videoGraf = document.createElement("p");
+                var videoElement = document.createElement("a");
+                var videoTitle = videoResults[i].titleNoFormatting;
+                if(videoTitle.indexOf("&#39;") >= 0) {
+                    videoTitle = videoTitle.replace(/&#39;/g, "'");
+                }
+                
+                var videoElementText = document.createTextNode(videoTitle);
+                var decoded = decodeURIComponent(videoResults[i].url);
+
+                videoElement.setAttribute("href", decoded);
+                videoElement.appendChild(videoElementText);
+                videoGraf.appendChild(videoElement);
+                videoDiv.appendChild(videoGraf);
+
+            } 
+
+            var videoMarker = document.getElementById("video-marker");
+            var parentVideoNode = videoMarker.parentNode;
+
+            parentVideoNode.insertBefore(videoDiv, videoMarker.nextSibling);
+
+            
+
+        }
+    }
+
+
+
+    function OnLoad() {
+      
+        // Create an Image Search instance.
+        imageSearch = new google.search.ImageSearch();
+        newsSearch = new google.search.NewsSearch();
+        videoSearch = new google.search.VideoSearch();
+        newsSearch2 = new google.search.NewsSearch();
+
+        // Set searchComplete as the callback function when a search is 
+        // complete.  The imageSearch object will have results in it.
+        imageSearch.setSearchCompleteCallback(this, imageSearchComplete, null);
+        newsSearch.setSearchCompleteCallback(this, newsSearchComplete, null);
+        videoSearch.setSearchCompleteCallback(this, videoSearchComplete, null);
+        newsSearch2.setSearchCompleteCallback(this, newsSearchCompleteColl, null);
+
+        
+        imageSearch.execute(searchString);
+        
+        newsSearch.setResultSetSize(8);
+        videoSearch.setResultSetSize(8);
+        newsSearch2.setResultSetSize(8);
+
+        newsSearch.execute(searchString);
+        videoSearch.execute(searchString);
+        newsSearch2.execute(searchString2);
+        
+        
+
+        
+    }
+    google.setOnLoadCallback(OnLoad);
+
+</script>
+
+<!-- Script for the Twitter API-->
+<script>window.twttr = (function (d, s, id) {
+  var t, js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src= "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+    }(document, "script", "twitter-wjs"));
+</script>
+
+</body>
+
+</html>
